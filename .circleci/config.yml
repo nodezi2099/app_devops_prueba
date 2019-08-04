@@ -20,9 +20,9 @@ jobs:
       - checkout
       - setup_remote_docker
 
-      -run: docker build -t devops .
+      - run: docker build -t devops .
 
-      -run: docker run devops npm test
+      - run: docker run devops npm test
 
       # Download and cache dependencies
       - restore_cache:
